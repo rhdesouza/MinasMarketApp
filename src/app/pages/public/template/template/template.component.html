@@ -4,10 +4,13 @@
             <img id="logo" src="../../../../../assets/logo.png" alt="Logo Minas Market" />
         </div>
         <div id="pesquisa">
-            <mat-form-field appearance="outline" id="search">
-                <input matInput type="search" placeholder="Encontre aqui sua oferta" class="search-input">
-                <mat-icon matSuffix>search</mat-icon>
-            </mat-form-field>
+            <form [formGroup]="serachForm" (ngSubmit)="onSubmit()">
+                <mat-form-field appearance="outline" id="search">
+                    <input matInput type="search" placeholder="Encontre aqui sua oferta" class="search-input"
+                        formControlName="search">
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+            </form>
         </div>
         <div id="restrito">
             <span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="announcement"></mat-icon>Meus
@@ -32,5 +35,16 @@
             Melhores vendedores
         </div>
     </div>
-    <router-outlet></router-outlet>
+    <div id="content">
+        <div id="coluna-esquerda">
+            esq
+        </div>
+        <div id="coluna-centro">
+            centro
+            <router-outlet></router-outlet>
+        </div>
+        <div id="coluna-direita">
+            dir
+        </div>
+    </div>
 </div>

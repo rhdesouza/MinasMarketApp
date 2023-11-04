@@ -2,6 +2,16 @@ $backgroundPrimary: #280069b5;
 //$backgroundPrimary: #690000b5;
 $colorPrimary: white;
 
+div#container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 #toolbar {
     //border: 1px red solid;
     height: 80px;
@@ -96,4 +106,31 @@ $colorPrimary: white;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.2s;
+}
+
+div#container > div#content {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    div#coluna-esquerda {
+        width: 10%;
+        height: 100%;
+    }
+
+    div#coluna-centro {
+        width: 80%;
+        height: 100%;
+        background-color: whitesmoke;
+    }
+
+    div#coluna-direita {
+        width: 10%;
+        height: 100%;
+    }
+
 }
