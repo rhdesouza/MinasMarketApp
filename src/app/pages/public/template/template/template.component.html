@@ -1,22 +1,36 @@
 <div id="container">
-    <p>
-        <mat-toolbar id="toolbar">
-            <div id="logo">
-                <img id="logo" src="../../../../../assets/logo.png" alt="Logo Minas Market" />
-            </div>
-            <div id="pesquisa">
-                <mat-form-field appearance="outline">
-                    <input matInput type="search" placeholder="Encontre aqui sua oferta" class="search-input">
-                    <mat-icon matSuffix>search</mat-icon>
-                </mat-form-field>
-            </div>
-            <div id="restrito">
-                <span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="announcement"></mat-icon>Meus anuncios</span>
-                <span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat"></mat-icon>Chat</span>
-                <span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="notification_important"></mat-icon>Notificações</span>
-                <span>Entrar</span>
-            </div>
-        </mat-toolbar>
-    </p>
+    <mat-toolbar id="toolbar">
+        <div id="logo">
+            <img id="logo" src="../../../../../assets/logo.png" alt="Logo Minas Market" />
+        </div>
+        <div id="pesquisa">
+            <mat-form-field appearance="outline" id="search">
+                <input matInput type="search" placeholder="Encontre aqui sua oferta" class="search-input">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div id="restrito">
+            <span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="announcement"></mat-icon>Meus
+                anuncios</span>
+            <span><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="chat"></mat-icon>Chat</span>
+            <span><mat-icon aria-hidden="false" aria-label="Example home icon"
+                    fontIcon="notification_important"></mat-icon>Notificações</span>
+            <span style="font-weight: bold;">Entrar</span>
+        </div>
+    </mat-toolbar>
+    <div id="sub-bar">
+        <div>
+            CATEGORIAS
+        </div>
+        <div>
+            Anúncios do dia
+        </div>
+        <div>
+            Mais visitados
+        </div>
+        <div>
+            Melhores vendedores
+        </div>
+    </div>
     <router-outlet></router-outlet>
 </div>
