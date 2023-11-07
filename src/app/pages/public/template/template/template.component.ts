@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-template',
@@ -8,17 +10,27 @@ import { FormBuilder } from '@angular/forms';
 })
 export class TemplateComponent {
   constructor(
-    private formBuilder: FormBuilder
-  ) {}
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) { }
 
   serachForm = this.formBuilder.group({
     search: ''
   });
 
-  public onSubmit(): void{
-    alert("Pesquisar: " + this.serachForm.value.search);
+  ngOnInit() {
+    this.serachForm.valueChanges.pipe(
+      debounceTime(600)
+    ).subscribe(txt => {
+      if (txt?.search != null) {
+        this.router.navigate(['/anuncios'], {
+          queryParams: {
+            textSearch: txt?.search
+          }
+        })
+      } else {
+        this.router.navigate(['']);
+      }
+    })
   }
-
-
-
 }

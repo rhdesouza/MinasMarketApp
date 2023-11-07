@@ -4,7 +4,7 @@
             <img id="logo" src="../../../../../assets/logo.png" alt="Logo Minas Market" />
         </div>
         <div id="pesquisa">
-            <form [formGroup]="serachForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="serachForm">
                 <mat-form-field appearance="outline" id="search">
                     <input matInput type="search" placeholder="Encontre aqui sua oferta" class="search-input"
                         formControlName="search">
@@ -37,14 +37,11 @@
     </div>
     <div id="content">
         <div id="coluna-esquerda">
-            esq
         </div>
         <div id="coluna-centro">
-            centro
             <router-outlet></router-outlet>
         </div>
         <div id="coluna-direita">
-            dir
         </div>
     </div>
 </div>
