@@ -26,7 +26,7 @@ export class TemplateComponent {
         this.router.navigate(['/anuncios'], {
           queryParams: {
             textSearch: txt?.search
-          }
+          },
         })
       } else {
         this.router.navigate(['']);

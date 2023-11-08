@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    API: '',
+    API: 'http://localhost:8080/',
     Authorization: '',
     keyCriptoJs: ''
 };

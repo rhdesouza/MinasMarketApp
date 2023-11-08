@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './common/external/material.module';
 import { PageNotFoundComponent } from './common/external/page-not-found/page-not-found.component';
 import { TemplateModule } from './pages/public/template/template/template.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TemplateModule } from './pages/public/template/template/template.module
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    TemplateModule
+    TemplateModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },

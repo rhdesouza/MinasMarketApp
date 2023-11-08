@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    API: '',
+    API: 'http://minasmarket:8080/',
     Authorization: '',
     keyCriptoJs: ''
 };
