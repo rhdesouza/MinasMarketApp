@@ -1,1 +1,22 @@
-{{textSerch}}
+<div id="announcements-cards">
+    <div *ngFor="let announcement of announcements; index as i; first as isFirst" class="cards">
+        <mat-card class="announcement-card">
+            <mat-card-header class="title-card">
+                <mat-card-title>{{announcement.description}}</mat-card-title>
+                <mat-card-subtitle class="subtitle-card">{{announcement.category}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>IMAGES</p>
+                <p>IMAGES</p>
+                <p>IMAGES</p>
+                <p>IMAGES</p>
+                <p>IMAGES</p>
+                <p>IMAGES</p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-button class="buttom-card">VER MAIS</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+</div>

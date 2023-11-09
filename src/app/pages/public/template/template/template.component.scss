@@ -1,6 +1,4 @@
-//$backgroundPrimary: #280069b5; //privado
-$backgroundPrimary: #690000d3; //publico
-$colorPrimary: white;
+@import '/src/styles.scss';
 
 div#container{
     display: flex;

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AnnouncementService } from '../announcement/announcement.service';
+import { Announcement } from 'src/app/model/dto/Announcement';
 
 @Component({
   selector: 'app-announcement',
@@ -10,6 +11,7 @@ import { AnnouncementService } from '../announcement/announcement.service';
 })
 export class AnnouncementComponent {
   protected textSerch: string = "";
+  protected announcements: Announcement[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -20,15 +22,14 @@ export class AnnouncementComponent {
   ngOnInit() {
     this.route.queryParamMap
       .subscribe((params: any) => {
-        this.textSerch = params['params']?.textSearch;
         this.getAnnouncements(params['params']?.textSearch);
       })
   }
 
   private getAnnouncements(text: string) {
     this.announcementService.getAnnouncements(text)
-    .then(ret=>{
-      console.log(ret);
+    .then((ret: Announcement[]) =>{
+      this.announcements = ret;
     })
     .catch(ex=>{
       console.error(ex);

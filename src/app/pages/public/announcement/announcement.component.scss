@@ -1,0 +1,27 @@
+@import '/src/styles.scss';
+
+div#announcements-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.cards {
+    width: 300px;
+    height: 500px;
+    padding: 15px 15px 15px 0px ;
+}
+
+.buttom-card{
+    color: $colorPrimary !important;
+    background-color: $backgroundPrimary;
+}
+.title-card{
+    color: $colorPrimary !important;
+    background-color: $backgroundPrimary;
+}
+.subtitle-card{
+    color: $colorPrimary !important;
+}
